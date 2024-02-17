@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Password Generator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;200;300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="">PASSWORD GENERATOR</h1>
+        <div class="display-container">
+            <input type="text" readonly placeholder="Password" class="display" data-passwordDisplay>
+            <button class="copyBtn" data-copy>
+                <span class="tooltip" data-copyMsg></span>
+                <img src="./assets/copy.svg" alt="" width="23" height="23">
+            </button>
+        </div>
+
+
+        <!-- passowrd length section -->
+        <div class="input-container">
+            <div class="length-container">
+                <p>Password Length</p>
+                <p class="" data-lengthNumber>10</p>
+            </div>
+
+
+            <!-- slider for length -->
+            <input type="range" min="1" max="20" class="slider" step="1" data-lengthSlider>
+
+            <!-- checkboxes -->
+            <div class="check">
+                <input type="checkbox" id="uppercase" checked>
+                <label for="uppercase">Include Uppercase letters</label>
+            </div>
+
+            <div class="check">
+                <input type="checkbox" id="lowercase">
+                <label for="lowercase">Include Lowercase letters</label>
+            </div>
+
+            <div class="check">
+                <input type="checkbox" id="numbers">
+                <label for="numbers">Include numbers</label>
+            </div>
+
+            <div class="check">
+                <input type="checkbox" id="symbols">
+                <label for="symbols">Include symbols</label>
+            </div>
+
+
+            <!-- strength indicator section -->
+            <div class="strength-container">
+                <p>Strength</p>
+                <div class="indicator" strength-indicator></div>
+            </div>
+
+            <button class="generateButton">
+                Generate Password
+            </button>
+        </div>
+    </div>
+
+
+
+
+    
+
+
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script>
+        var typeData = new Typed(".role", {
+          strings: [
+            "PASSWORD GENERATOR",
+          ],
+          loop: true,
+          typeSpeed: 100,
+          backSpeed: 80,
+          backDelay: 1000,
+        });
+      </script>
+    <script src="script.js"></script>
+</body>
+</html>
